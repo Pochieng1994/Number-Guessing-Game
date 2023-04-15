@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <form id="form">
+
+    <label for="guessInput">
+      <h3>
+        Guess a Number Between 1-100 That The Computer Has Picked,
+        You Will Be Given 3 Tries To Guess The Number:
+      </h3>
+    </label>
+
+    <input type="number" id="guessInput" name="number" min="1" max="100" required>
+
+    <input type="submit" id="guessSubmit">
+
+  </form>
+
+
+  <p class="outputText"></p>
+ 
   
   <script src="script.js"></script>
 </body>
