@@ -8,8 +8,11 @@ let randomNumber = Math.floor(Math.random() * 101);
 
 let guessInput = document.querySelector('#guessInput');
 let guessSubmit = document.querySelector('#guessSubmit');
+let resetButton = document.querySelector('#resetButton');
 
 let outputText = document.querySelector('.outputText');
+
+let myForm = document.querySelector('#form');
 
 guessSubmit.addEventListener('click', function() {
   let input = document.getElementById('guessInput').value;
@@ -20,4 +23,12 @@ guessSubmit.addEventListener('click', function() {
   } else if(input < randomNumber) {
     outputText.innerHTML = 'You Guessed Too High';
   }
+})
+
+resetButton.addEventListener('click', function(){
+  location.reload();
+})
+
+myForm.addEventListener('submit', function (e){
+  e.preventDefault();
 })

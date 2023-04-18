@@ -9,23 +9,27 @@
 </head>
 <body>
 
-  <form id="form">
+  <div class="container">
+    <form id="form">
 
-    <label for="guessInput">
-      <h3>
-        Guess a Number Between 1-100 That The Computer Has Picked,
-        You Will Be Given 3 Tries To Guess The Number:
-      </h3>
-    </label>
-
-    <input type="number" id="guessInput" name="number" min="1" max="100" required>
-
-    <input type="submit" id="guessSubmit">
-
-  </form>
-
-
-  <p class="outputText"></p>
+      <label for="guessInput">
+        <h3 class="header">
+          Guess a Number Between 1-100 That The Computer Has Picked,
+          You Will Be Given 3 Tries To Guess The Number:
+        </h3>
+      </label>
+  
+      <input type="number" id="guessInput" class="input-1" name="number" min="1" max="100" required>
+  
+      <input type="submit" id="guessSubmit" class="input-2">
+  
+      <input type="reset" id="resetButton" class="input-3">
+  
+    </form>
+  
+  
+    <p class="outputText"></p>
+  </div>
  
   
   <script src="script.js"></script>
