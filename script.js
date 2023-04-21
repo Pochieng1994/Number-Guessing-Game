@@ -4,7 +4,7 @@ After their third guess, reveal the number the computer chose to them, and
 let them know if they got it right or wrong.
 
 */
-let randomNumber = Math.floor(Math.random() * 101);
+let randomNumber = Math.ceil(Math.random() * 100);
 
 let guessInput = document.querySelector('#guessInput');
 let guessSubmit = document.querySelector('#guessSubmit');
@@ -14,14 +14,22 @@ let outputText = document.querySelector('.outputText');
 
 let myForm = document.querySelector('#form');
 
+let numberOfGuesses = 0;
+
+
 guessSubmit.addEventListener('click', function() {
-  let input = document.getElementById('guessInput').value;
+  let input = document.querySelector('#guessInput').value;
+
+  numberOfGuesses += 1;
+
   if(input === randomNumber) {
     outputText.innerHTML = `Congrats You Guessed Right! The Number Is ${randomNumber}`;
   } else if(input > randomNumber) {
     outputText.innerHTML = 'You Guessed Too Low';
+    outputText.style.color = 'red';
   } else if(input < randomNumber) {
     outputText.innerHTML = 'You Guessed Too High';
+    outputText.style.color = 'red';
   }
 })
 
