@@ -15,20 +15,27 @@ let outputText = document.querySelector('.outputText');
 let myForm = document.querySelector('#form');
 
 let numberOfGuesses = 0;
-
+console.log(typeof randomNumber);
 
 guessSubmit.addEventListener('click', function() {
-  let input = document.querySelector('#guessInput').value;
-
+  let input = Number(document.querySelector('#guessInput').value);
   numberOfGuesses += 1;
+  console.log(typeof input)
+
+  if(numberOfGuesses > 3){
+    outputText.innerHTML = `You have exceeded the number of tries that you have the correct 
+    number is ${randomNumber}`;
+    return;
+  }
 
   if(input === randomNumber) {
     outputText.innerHTML = `Congrats You Guessed Right! The Number Is ${randomNumber}`;
+    outputText.style.color = 'green';
   } else if(input > randomNumber) {
-    outputText.innerHTML = 'You Guessed Too Low';
+    outputText.innerHTML = 'You Guessed Too High';
     outputText.style.color = 'red';
   } else if(input < randomNumber) {
-    outputText.innerHTML = 'You Guessed Too High';
+    outputText.innerHTML = 'You Guessed Too Low';
     outputText.style.color = 'red';
   }
 })

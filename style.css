@@ -1,11 +1,63 @@
 .container {
   margin-top: 50px;
-  margin-left: 200px;
+  margin-left: 350px;
   margin-right: 200px;
+}
+
+#guessInput {
+  margin-left: 220px;
+}
+
+#guessSubmit {
+  border-radius: 35px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 17px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 2px #666;
+  background-color: forestgreen;
+  border: none;
+  color: white;
+}
+
+#guessSubmit:hover {
+  background-color: darkgreen;
+  transition: 0.3s;
+}
+
+#guessSubmit:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+
+
+#resetButton {
+  border-radius: 35px;
+  border: none;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-size: 17px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: crimson;
+  color: white;
+}
+
+#resetButton:hover {
+  background-color: darkred;
+  transition: 0.3s;
+}
+
+#resetButton:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
 }
 
 .header {
   margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .input-1 {
@@ -26,6 +78,7 @@
 }
 
 .outputText {
-  margin-left: 400px;
+  margin-left: 300px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
