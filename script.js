@@ -29,6 +29,7 @@ guessSubmit.addEventListener('click', function() {
   if(input === randomNumber) {
     outputText.innerHTML = `Congrats You Guessed Right! The Number Is ${randomNumber}`;
     outputText.style.color = 'green';
+    numberOfGuesses = 4;
   } else if(input > randomNumber) {
     outputText.innerHTML = 'You Guessed Too High';
     outputText.style.color = 'red';
