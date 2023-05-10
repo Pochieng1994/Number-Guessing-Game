@@ -1,9 +1,3 @@
-/* A user has three tries to guess the number, between 1-100, that the computer picked.
-Whenever they guess, let them know if their guess is too high, or too low.
-After their third guess, reveal the number the computer chose to them, and 
-let them know if they got it right or wrong.
-
-*/
 let randomNumber = Math.ceil(Math.random() * 100);
 
 let guessInput = document.querySelector('#guessInput');
