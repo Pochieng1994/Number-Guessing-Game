@@ -1,23 +1,20 @@
-let randomNumber = Math.ceil(Math.random() * 100);
-
-let guessInput = document.querySelector('#guessInput');
-let guessSubmit = document.querySelector('#guessSubmit');
+let randomNumber = Math.ceil(Math.random() * 100); 
+let guessInput = document.querySelector('#guessInput');  
 let resetButton = document.querySelector('#resetButton');
-
 let outputText = document.querySelector('.outputText');
-
 let myForm = document.querySelector('#form');
 
-let numberOfGuesses = 0;
+let numberOfGuesses = 0; 
 
-guessSubmit.addEventListener('click', function() {
-  let input = Number(document.querySelector('#guessInput').value);
-  numberOfGuesses += 1;
-
-  if(numberOfGuesses > 3){
+myForm.addEventListener('submit', function (e){ 
+  e.preventDefault(); 
+  let input = Number(document.querySelector('#guessInput').value); 
+  numberOfGuesses += 1;  
+                        
+  if(numberOfGuesses > 3){ 
     outputText.innerHTML = `You have exceeded the number of tries that you have the correct 
-    number is ${randomNumber}`;
-    return;
+    number is ${randomNumber}`; 
+    return; 
   }
 
   if(input === randomNumber) {
@@ -33,12 +30,9 @@ guessSubmit.addEventListener('click', function() {
   }
 })
 
-resetButton.addEventListener('click', function(){
-  randomNumber = Math.ceil(Math.random() * 100);
-  numberOfGuesses = 0;
+resetButton.addEventListener('click', function(){ 
+  randomNumber = Math.ceil(Math.random() * 100); 
+  numberOfGuesses = 0; 
   outputText.innerHTML = '';
 })
 
-myForm.addEventListener('submit', function (e){
-  e.preventDefault();
-})
